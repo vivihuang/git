@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-dark.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <title>Git.vivihuang.GitHub.io by vivihuang</title>
+  </head>
+
+  <body>
+    <div id="container">
+      <div class="inner">
+
+        <header>
+          <h1>Git.vivihuang.GitHub.io</h1>
+          <h2>小码农和和的博客</h2>
+        </header>
+
+        <section id="downloads" class="clearfix">
+          <a href="https://github.com/vivihuang/git.vivihuang.github.io/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
+          <a href="https://github.com/vivihuang/git.vivihuang.github.io/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
+          <a href="https://github.com/vivihuang/git.vivihuang.github.io" id="view-on-github" class="button"><span>View on GitHub</span></a>
+        </section>
+
+        <hr>
+
+        <section id="main_content">
+          <h1>
+<a id="git相关命令" class="anchor" href="#git%E7%9B%B8%E5%85%B3%E5%91%BD%E4%BB%A4" aria-hidden="true"><span class="octicon octicon-link"></span></a>git相关命令</h1>
+
+<h2>
+<a id="创建git版本库" class="anchor" href="#%E5%88%9B%E5%BB%BAgit%E7%89%88%E6%9C%AC%E5%BA%93" aria-hidden="true"><span class="octicon octicon-link"></span></a>创建git版本库</h2>
+
+<h3>
+<a id="1-初始化--git-init" class="anchor" href="#1-%E5%88%9D%E5%A7%8B%E5%8C%96--git-init" aria-hidden="true"><span class="octicon octicon-link"></span></a>1. 初始化  git init</h3>
+
+<ul>
+<li>
+<p>用于对本地仓库进行初始化</p>
+
+<pre><code>$git init
+</code></pre>
+</li>
+<li>
+<p>通过ls -ah命令可以查看隐藏的.git文件</p>
+
+<pre><code>$ls -ah
+</code></pre>
+</li>
+</ul>
+
+<h3>
+<a id="2-添加文件--git-add" class="anchor" href="#2-%E6%B7%BB%E5%8A%A0%E6%96%87%E4%BB%B6--git-add" aria-hidden="true"><span class="octicon octicon-link"></span></a>2. 添加文件  git add</h3>
+
+<ul>
+<li>
+<p>将目录添加到版本库，放至暂存区</p>
+
+<pre><code>$git add
+</code></pre>
+</li>
+<li>
+<p>添加所有文件</p>
+
+<pre><code>$git add --all
+</code></pre>
+</li>
+</ul>
+
+<h3>
+<a id="3-提交文件--git-commit--m-" class="anchor" href="#3-%E6%8F%90%E4%BA%A4%E6%96%87%E4%BB%B6--git-commit--m-" aria-hidden="true"><span class="octicon octicon-link"></span></a>3. 提交文件  git commit -m ""</h3>
+
+<ul>
+<li>
+<p>将文件从本地目录提交到本地仓库</p>
+
+<pre><code>$git commit -m "hello world"
+</code></pre>
+</li>
+</ul>
+
+<h3>
+<a id="4-查看提交记录--git-log" class="anchor" href="#4-%E6%9F%A5%E7%9C%8B%E6%8F%90%E4%BA%A4%E8%AE%B0%E5%BD%95--git-log" aria-hidden="true"><span class="octicon octicon-link"></span></a>4. 查看提交记录  git log</h3>
+
+<ul>
+<li>
+<p>查看本地版本库提交记录</p>
+
+<pre><code>$git log
+</code></pre>
+</li>
+</ul>
+
+<h3>
+<a id="5-查看git状态--git-status" class="anchor" href="#5-%E6%9F%A5%E7%9C%8Bgit%E7%8A%B6%E6%80%81--git-status" aria-hidden="true"><span class="octicon octicon-link"></span></a>5. 查看git状态  git status</h3>
+
+<ul>
+<li>
+<p>查看本地目录文件的git状态</p>
+
+<pre><code>$git status
+</code></pre>
+</li>
+</ul>
+
+<h2>
+<a id="修改本地版本库" class="anchor" href="#%E4%BF%AE%E6%94%B9%E6%9C%AC%E5%9C%B0%E7%89%88%E6%9C%AC%E5%BA%93" aria-hidden="true"><span class="octicon octicon-link"></span></a>修改本地版本库</h2>
+
+<h3>
+<a id="1-查看修改情况--git-diff" class="anchor" href="#1-%E6%9F%A5%E7%9C%8B%E4%BF%AE%E6%94%B9%E6%83%85%E5%86%B5--git-diff" aria-hidden="true"><span class="octicon octicon-link"></span></a>1. 查看修改情况  git diff</h3>
+
+<ul>
+<li>
+<p>查看本地文件和本地最新版本库的区别</p>
+
+<pre><code>$git diff HEAD -- file.name
+$git diff HEAD -- readme.txt
+</code></pre>
+
+<p><strong>注意：只能查看未git add的文件</strong></p>
+</li>
+</ul>
+
+<h3>
+<a id="2-回退版本--git-reset" class="anchor" href="#2-%E5%9B%9E%E9%80%80%E7%89%88%E6%9C%AC--git-reset" aria-hidden="true"><span class="octicon octicon-link"></span></a>2. 回退版本  git reset</h3>
+
+<ul>
+<li>
+<p>将本地目录退回commit_id版本</p>
+
+<pre><code>$git log //查看commit_id
+$git reset --hard commit_id
+</code></pre>
+</li>
+<li>
+<p>将本地目录回退至上一次commit之后的版本</p>
+
+<pre><code>$git reset --hard HEAD^
+</code></pre>
+</li>
+<li>
+<p>显示所有提交及回退记录（包括已回退记录），可用于回退旧版本之后再次回到新版本</p>
+
+<pre><code>$git reflog
+</code></pre>
+</li>
+</ul>
+
+<h3>
+<a id="3-撤销修改" class="anchor" href="#3-%E6%92%A4%E9%94%80%E4%BF%AE%E6%94%B9" aria-hidden="true"><span class="octicon octicon-link"></span></a>3. 撤销修改</h3>
+
+<ul>
+<li>
+<p>撤销修改，让文件回到最近一次git commit或git add时的状态</p>
+
+<pre><code>$git checkout -- file.name
+</code></pre>
+
+<p>若未git add，则退回到最新版本库，即最近的git commit版本</p>
+
+<p>若已git add，但未git commit，则退回到git add时的版本</p>
+</li>
+</ul>
+
+<h3>
+<a id="4-删除文件--git-rm-filename" class="anchor" href="#4-%E5%88%A0%E9%99%A4%E6%96%87%E4%BB%B6--git-rm-filename" aria-hidden="true"><span class="octicon octicon-link"></span></a>4. 删除文件  git rm file.name</h3>
+
+<ul>
+<li>
+<p>从版本库中删除文件</p>
+
+<pre><code>$git rm file.name
+</code></pre>
+</li>
+<li>
+<p>若误删本地目录中的文件可用<code>git checkout -- file.name</code>从本地版本库中找回</p>
+
+<pre><code>$git checkout -- file.name
+</code></pre>
+</li>
+</ul>
+
+<h2>
+<a id="远程仓库管理" class="anchor" href="#%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E7%AE%A1%E7%90%86" aria-hidden="true"><span class="octicon octicon-link"></span></a>远程仓库管理</h2>
+
+<h3>
+<a id="1-创建远程库" class="anchor" href="#1-%E5%88%9B%E5%BB%BA%E8%BF%9C%E7%A8%8B%E5%BA%93" aria-hidden="true"><span class="octicon octicon-link"></span></a>1. 创建远程库</h3>
+
+<ul>
+<li>
+<p>创建SSH Key</p>
+
+<pre><code>$ ssh-keygen -t rsa -C "vivihuang126@gmail"
+</code></pre>
+
+<p>之后一直回车，选择默认值，无需设置密码</p>
+
+<p>可以在用户主目录<code>/usr</code>里找到隐藏的<code>.ssh</code>目录，里面有<code>id_rsa</code>和<code>id_rsa.pub</code>两个文件，这两个就是SSH Key的秘钥对，<code>id_rsa</code>是私钥，不能泄露出去，<code>id_rsa.pub</code>是公钥。</p>
+</li>
+<li>
+<p>登录git</p>
+
+<p>登陆<code>GitHub</code>，打开<code>Account settings</code>，<code>SSH Keys</code>页面:
+<a href="https://github.com/settings/ssh">Account settings/ SSH Keys</a></p>
+
+<p>选择<code>Add SSH Keys</code>，在<code>Key</code>文本框里粘贴<code>id_rsa.pub</code>文件的内容，之后点击<code>Add Key</code>，完成。</p>
+</li>
+<li>
+<p>创建new repo</p>
+
+<p>登陆<code>GitHub</code>，然后，在右上角找到<code>Create a new repo</code>按钮，创建一个新的仓库，填入<code>Repository name</code>后选择<code>Create repository</code></p>
+</li>
+<li>
+<p>在本地目录下创建该repo</p>
+
+<pre><code>$ git remote add origin https://github.com/vivihuang/repo_name.git
+</code></pre>
+</li>
+<li>
+<p>将本地内容推送至远程库</p>
+
+<pre><code>$ git push -u origin master
+</code></pre>
+</li>
+</ul>
+
+<h3>
+<a id="2-克隆远程库" class="anchor" href="#2-%E5%85%8B%E9%9A%86%E8%BF%9C%E7%A8%8B%E5%BA%93" aria-hidden="true"><span class="octicon octicon-link"></span></a>2. 克隆远程库</h3>
+
+<ul>
+<li>
+<p>从远程库克隆至本地目录</p>
+
+<pre><code>$ git clone https://github.com/vivihuang/repo_name.git
+</code></pre>
+</li>
+</ul>
+
+<h2>
+<a id="分支管理" class="anchor" href="#%E5%88%86%E6%94%AF%E7%AE%A1%E7%90%86" aria-hidden="true"><span class="octicon octicon-link"></span></a>分支管理</h2>
+
+<h3>
+<a id="1-创建与合并分支" class="anchor" href="#1-%E5%88%9B%E5%BB%BA%E4%B8%8E%E5%90%88%E5%B9%B6%E5%88%86%E6%94%AF" aria-hidden="true"><span class="octicon octicon-link"></span></a>1. 创建与合并分支</h3>
+
+<ul>
+<li>
+<p>创建并切换至<code>dev</code>分支</p>
+
+<pre><code>$ git branck dev     //创建dev分支
+$ git checkout dev   //切换至dev分支
+Switched to a new branch 'dev'
+</code></pre>
+
+<p>也可直接用</p>
+
+<pre><code>$ git checkout -b dev
+Switched to a new branch 'dev'
+</code></pre>
+</li>
+<li>
+<p>查看当前分支</p>
+
+<pre><code>$ git branch
+* dev
+  master
+</code></pre>
+
+<p><code>git branch</code>命令会列出所有分支，当前分支前面会标一个*号。</p>
+
+<p>此时提交则会在<code>dev</code>分支上进行提交。</p>
+
+<ul>
+<li>
+<p>合并分支</p>
+
+<p>提交之后可再用<code>git checkout master</code>切换回<code>master</code>分支</p>
+
+<pre><code>$ git checkout master
+Switched to branch 'master'
+</code></pre>
+
+<p>把<code>dev</code>分支的工作成果合并到<code>master</code>分支上</p>
+
+<pre><code>$git merge dev
+</code></pre>
+
+<p><code>git merge</code>命令用于合并指定分支到当前分支，因此必须在切换分支后使用。</p>
+</li>
+<li>
+<p>删除分支</p>
+
+<p>合并完成后，就可以放心地删除dev分支了：</p>
+
+<pre><code>$ git branch -d dev
+Deleted branch dev (was fec145a).
+</code></pre>
+
+<p>删除后，查看branch，就只剩下master分支了：</p>
+
+<pre><code>$ git branch
+* master
+</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+
+<h3>
+<a id="2-解决冲突" class="anchor" href="#2-%E8%A7%A3%E5%86%B3%E5%86%B2%E7%AA%81" aria-hidden="true"><span class="octicon octicon-link"></span></a>2. 解决冲突</h3>
+        </section>
+
+        <footer>
+          Git.vivihuang.GitHub.io is maintained by <a href="https://github.com/vivihuang">vivihuang</a><br>
+          This page was generated by <a href="https://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
+        </footer>
+
+        
+      </div>
+    </div>
+  </body>
+</html>
