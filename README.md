@@ -172,6 +172,74 @@
 ###2. 解决冲突
 
 
+##Tag管理
+
+
+###1. 打tag
+
+* 打tag，对当前版本创建版本号
+
+	     $ git tag -a v1.0 -m "version 1.0"
+	     
+* 创建轻量标签
+
+		$ git tag v0.1.2-light
+		
+* 创建附注标签
+
+		$ git tag -a v0.1.2 -m “0.1.2版本”
+		
+* 给指定的commit打标签
+
+		$ git tag -a v0.1.1 9fbc3d0
+
+###2. 发布tag
+
+* 将v0.1.2标签提交到git服务器
+
+		$ git push origin v0.1.2
+
+* 将本地所有标签一次性提交到git服务器
+
+		 $ git push origin —tags 
+		 
+###3. 查看tag
+
+* 打印出当前仓库的所有标签
+
+		$ git tag
+		
+* 搜索符合模式的标签
+
+		$ git tag -l ‘v0.1.*’
+
+	
+* 切换到某一个tag
+
+		$ git checkout tag_name
+		
+* 查看tag版本信息
+
+		$ git show v0.1.2
+
+		
+###4. 管理tag
+
+* 删除本地tag
+
+		$ git tag -d tag_name
+
+* 删除remote端tag
+
+		$   git push origin —delete tag <tagname>
+
+
+
+
+
+
+
+
  			
 	
 
