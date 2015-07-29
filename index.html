@@ -302,6 +302,105 @@ Deleted branch dev (was fec145a).
 <h3>
 <a id="2-解决冲突" class="anchor" href="#2-%E8%A7%A3%E5%86%B3%E5%86%B2%E7%AA%81" aria-hidden="true"><span class="octicon octicon-link"></span></a>2. 解决冲突</h3>
 
+<h2>
+<a id="tag管理" class="anchor" href="#tag%E7%AE%A1%E7%90%86" aria-hidden="true"><span class="octicon octicon-link"></span></a>Tag管理</h2>
+
+<h3>
+<a id="1-打tag" class="anchor" href="#1-%E6%89%93tag" aria-hidden="true"><span class="octicon octicon-link"></span></a>1. 打tag</h3>
+
+<ul>
+<li>
+<p>打tag，对当前版本创建版本号</p>
+
+<pre><code> $ git tag -a v1.0 -m "version 1.0"
+</code></pre>
+</li>
+<li>
+<p>创建轻量标签</p>
+
+<pre><code>$ git tag v0.1.2-light
+</code></pre>
+</li>
+<li>
+<p>创建附注标签</p>
+
+<pre><code>$ git tag -a v0.1.2 -m “0.1.2版本”
+</code></pre>
+</li>
+<li>
+<p>给指定的commit打标签</p>
+
+<pre><code>$ git tag -a v0.1.1 9fbc3d0
+</code></pre>
+</li>
+</ul>
+
+<h3>
+<a id="2-发布tag" class="anchor" href="#2-%E5%8F%91%E5%B8%83tag" aria-hidden="true"><span class="octicon octicon-link"></span></a>2. 发布tag</h3>
+
+<ul>
+<li>
+<p>将v0.1.2标签提交到git服务器</p>
+
+<pre><code>$ git push origin v0.1.2
+</code></pre>
+</li>
+<li>
+<p>将本地所有标签一次性提交到git服务器</p>
+
+<pre><code> $ git push origin —tags 
+</code></pre>
+</li>
+</ul>
+
+<h3>
+<a id="3-查看tag" class="anchor" href="#3-%E6%9F%A5%E7%9C%8Btag" aria-hidden="true"><span class="octicon octicon-link"></span></a>3. 查看tag</h3>
+
+<ul>
+<li>
+<p>打印出当前仓库的所有标签</p>
+
+<pre><code>$ git tag
+</code></pre>
+</li>
+<li>
+<p>搜索符合模式的标签</p>
+
+<pre><code>$ git tag -l ‘v0.1.*’
+</code></pre>
+</li>
+<li>
+<p>切换到某一个tag</p>
+
+<pre><code>$ git checkout tag_name
+</code></pre>
+</li>
+<li>
+<p>查看tag版本信息</p>
+
+<pre><code>$ git show v0.1.2
+</code></pre>
+</li>
+</ul>
+
+<h3>
+<a id="4-管理tag" class="anchor" href="#4-%E7%AE%A1%E7%90%86tag" aria-hidden="true"><span class="octicon octicon-link"></span></a>4. 管理tag</h3>
+
+<ul>
+<li>
+<p>删除本地tag</p>
+
+<pre><code>$ git tag -d tag_name
+</code></pre>
+</li>
+<li>
+<p>删除remote端tag</p>
+
+<pre><code>$   git push origin —delete tag &lt;tagname&gt;
+</code></pre>
+</li>
+</ul>
+
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/vivihuang/git.vivihuang.github.io">Git.vivihuang.GitHub.io</a> is maintained by <a href="https://github.com/vivihuang">vivihuang</a>.</span>
 
