@@ -201,7 +201,7 @@
 
 * 将本地所有标签一次性提交到git服务器
 
-		 $ git push origin —tags 
+		 $ git push origin -—tags 
 		 
 ###3. 查看tag
 
