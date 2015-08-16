@@ -232,6 +232,8 @@
 * 删除remote端tag
 
 		$   git push origin —delete tag <tagname>
+		
+###5. test
 
 
 
